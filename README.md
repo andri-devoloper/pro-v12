@@ -1,69 +1,59 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Template ini menyediakan setup minimal untuk memulai proyek React dengan Vite dan TypeScript. Sudah termasuk konfigurasi dasar untuk HMR dan ESLint, serta dukungan plugin resmi Vite.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Fitur Utama
 
-## Expanding the ESLint configuration
+- ⚡️ Vite (super fast bundler)
+- ⚛️ React
+- 🛡️ TypeScript
+- ✅ ESLint (dengan opsi konfigurasi Type-aware lint)
+- ♻️ HMR (Hot Module Replacement)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧹 Plugin Vite Resmi
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react): menggunakan **Babel** untuk Fast Refresh
+- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react-swc): menggunakan **SWC**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📦 Cara Clone & Install
+
+```bash
+# Clone repositori
+git clone https://github.com/username/nama-repo.git my-app
+cd my-app
+
+# Install dependensi
+npm install
+
+# Jalankan server pengembangan
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📂 Cara Update ke GitHub
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Setelah melakukan perubahan pada proyek (misalnya menambahkan komponen, mengedit file, dll), kamu bisa mengupload perubahan tersebut ke GitHub dengan langkah berikut:
+
+```bash
+# Cek status perubahan
+git status
+
+# Tambahkan semua perubahan yang ingin di-push
+git add .
+
+# Commit perubahan dengan pesan yang sesuai
+git commit -m "Deskripsi perubahan"
+
+# Push ke repository GitHub
+git push origin main
 ```
+
+> Pastikan kamu sudah terhubung ke remote GitHub repository dan berada di branch yang sesuai (umumnya `main`).
+
